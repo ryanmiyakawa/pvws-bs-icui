@@ -1,0 +1,42 @@
+{
+    "offset": {
+        "x": 250,
+        "y": 250
+    },
+    "shapes":
+    [
+        {
+            "type": "rect",
+            "x": -1,
+            "y": -25,
+            "width": 2,
+            "height": 50,
+            "style": {
+                "stroke": "rgb(240, 3, 240)",
+                "fill": "rgb(240, 3, 240)"
+            }
+        },
+        {
+            "type": "rect",
+            "x": -25,
+            "y": -1,
+            "width": 50,
+            "height": 2,
+            "style": {
+                "stroke": "rgb(240, 3, 240)",
+                "fill": "rgb(240, 3, 240)"
+            }
+        },
+        {
+            "type": "text",
+            "text": "EUV",
+            "fontFamily": "Verdana",
+            "fontSize": "18",
+            "fill": "rgb(240, 3, 240)",
+            "x": 10,
+            "y": 20
+        }
+    ]
+}
+
+
