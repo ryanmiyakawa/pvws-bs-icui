@@ -13,6 +13,7 @@ const GetSetValue = ({
   currentValuebackgroundColorClass = 'bg-red-700',
   targetValueColorClass = 'text-blue-700',
   targetValuebackgroundColorClass = 'bg-orange-200',
+  currenValueBfOff = false,
 
   showUnits = true,
   showPositionStores = true,
@@ -21,6 +22,8 @@ const GetSetValue = ({
   showSetPositionField = true,
   showLabel = true,
   label = 'Motor Axis',
+
+  widthNameClass = 'w-24',
 }) => {
   const [unitSelectedIndex, setUnitSelectedIndex]   = useState(0); 
   const [storeSelectedIndex, setStoreSelectedIndex] = useState(0); 
@@ -133,12 +136,12 @@ const GetSetValue = ({
   return (
     <div className={`flex items-center ${backgroundColorClass} text-black p-1 rounded-md`}>
       {showLabel && (
-        <div className={`p-1 mx-1 w-24 ${labelColorClass} text-right font-bold text-xl`}>
+        <div className={`p-0 mx-1 ${widthNameClass} ${labelColorClass} text-right font-bold text-xl`}>
           {label}
         </div>
       )}
   
-      <div className={`ml-1 w-24 text-center text-xl font-bold ${currentValuebackgroundColorClass} ${currentValueTextColorClass}`}>
+      <div className={` p-0 ml-1 w-24 text-center text-xl font-bold ${!currenValueBfOff && currentValuebackgroundColorClass} ${currentValueTextColorClass}`}>
         {rawToCalibrated(currentPositionRaw, true)}
       </div>
   

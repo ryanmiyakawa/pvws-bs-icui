@@ -5,17 +5,17 @@
 export const PVList = {
     'Grating-X': {
         PVDevice: "ZTS2:wafer:x",
-        fields: ['VAL', 'RBV', 'MOVN'],
+        fields: ['VAL', 'RBV', 'MOVN', 'STOP'],
         hardwareRoute: ['stages', 'grating', 'X'],
     },
     'Grating-Y': {
         PVDevice: "ZTS2:wafer:x",
-        fields: ['VAL', 'RBV', 'MOVN'],
+        fields: ['VAL', 'RBV', 'MOVN', 'STOP'],
         hardwareRoute: ['stages', 'grating', 'Y'],
     },
     'Grating-Z': {
         PVDevice: "ZTS2:wafer:x",
-        fields: ['VAL', 'RBV', 'MOVN'],
+        fields: ['VAL', 'RBV', 'MOVN', 'STOP'],
         hardwareRoute: ['stages', 'grating', 'Z'],
     }
 }

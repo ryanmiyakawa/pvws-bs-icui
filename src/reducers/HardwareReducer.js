@@ -15,7 +15,7 @@ const SENSOR_TEMPLATE = {
 
 // All json files in the src/hardwareConfig directory will be imported into config
 // properties in the corresponding state objects as defined by the stateRoute property
-const configModules = import.meta.glob('../hardwareConfig/*.json');
+const configModules = import.meta.glob('../hardwareConfig/configJSON/*.json');
 
 // Thunk for fetching and loading hardware configuration
 export const loadHardwareConfiguration = createAsyncThunk(
@@ -37,17 +37,16 @@ export const hardwareSlice = createSlice({
       loading: false,
       error: null,
       stages: {
-        mask: {
+        pinhole: {
+          X: STAGE_AXIS_TEMPLATE,
+          Y: STAGE_AXIS_TEMPLATE,
+        },
+        grating: {
           X: STAGE_AXIS_TEMPLATE,
           Y: STAGE_AXIS_TEMPLATE,
           Z: STAGE_AXIS_TEMPLATE,
         },
         wafer: {
-          X: STAGE_AXIS_TEMPLATE,
-          Y: STAGE_AXIS_TEMPLATE,
-          Z: STAGE_AXIS_TEMPLATE,
-        },
-        grating: {
           X: STAGE_AXIS_TEMPLATE,
           Y: STAGE_AXIS_TEMPLATE,
           Z: STAGE_AXIS_TEMPLATE,

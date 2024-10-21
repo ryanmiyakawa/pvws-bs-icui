@@ -1,0 +1,32 @@
+{
+    "stateRoute": ["stages", "wafer", "Y"],
+    "config":
+    {
+        "units": [
+            {
+                "name": "mm",
+                "slope": 1,
+                "offset": 0,
+                "precision": 3
+            },
+            {
+                "name": "um",
+                "slope": 1000,
+                "offset": 0,
+                "precision": 3
+            }
+        ],
+        "stores": [
+            {
+                "name": "out",
+                "raw": 1.5
+            },
+            {
+                "name": "diode",
+                "raw": 3
+            }
+        ],
+        "min": -250,
+        "max": 250
+    }
+}

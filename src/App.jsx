@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Hardware from './pages/Hardware';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { hardwareSlice, loadHardwareConfiguration } from './reducers/HardwareReducer';
@@ -19,6 +20,7 @@ const App = () => {
     <div className="App">
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/hardware" element={<Hardware />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
     </Routes>

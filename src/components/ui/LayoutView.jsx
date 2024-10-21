@@ -7,7 +7,9 @@ const LayoutView = ({
   SVG,
   setTarget,
   routeKeyboardHardwareControls,
+  backgroundColorClass = 'bg-slate-600', 
   unitsPerPixel = 1,
+  divDimensions = { width: 600, height: 600 },
   svgSize = { width: 500, height: 500 },
   viewPort = { offsetX: -1000, offsetY: -1000, width: 2000, height: 2000 },
 }) => {
@@ -22,8 +24,8 @@ const LayoutView = ({
 
   const initialZoom = 4;
 
-  const divWidth = 600;
-  const divHeight = 600;
+  const divWidth = divDimensions.width;
+  const divHeight = divDimensions.height;
 
   const svgWidthPx = SVG_WIDTH / svgScaleX * initialZoom;
   const svgHeightPx = SVG_HEIGHT / svgScaleY * initialZoom;
@@ -142,7 +144,8 @@ const LayoutView = ({
   }, [isFocused]);
 
   return (
-    <div
+<div className="bg-green-950" style={{ width: divWidth, height: divHeight }}>
+      <div
       ref={containerRef}
       className="relative overflow-hidden border w-full h-full"
       onMouseDown={handleMouseDown} // Start dragging on mouse down
@@ -179,6 +182,7 @@ const LayoutView = ({
       >
         <SVG width="100%" height="100%" />
       </div>
+    </div>
     </div>
   );
 };

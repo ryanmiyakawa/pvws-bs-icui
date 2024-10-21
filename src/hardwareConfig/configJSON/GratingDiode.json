@@ -1,0 +1,14 @@
+{
+    "stateRoute": ["sensors", "gratingDiode"],
+    "config":
+    {
+        "units": [
+            {
+                "name": "uA",
+                "slope": 1,
+                "offset": 0,
+                "precision": 3
+            }
+        ]
+    }
+}

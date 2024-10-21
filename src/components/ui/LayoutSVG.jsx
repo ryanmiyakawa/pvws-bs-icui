@@ -1,6 +1,4 @@
-
-
-
+/** Returns an SVG object as prescribed by shape array and params */
 const LayoutSVG = ({ shapes, svgSize, viewPort, posX = 0, posY = 0 }) => {
 
 
